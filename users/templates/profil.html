@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <div class="container">-->
+<!--    <div class="content-section" style="padding-top:150px">-->
+<!--      <div class="media">-->
+<!--        <img class="rounded" src="{{ user.profile.image.url }}">-->
+<!--        <div class="media-body">-->
+<!--          <h2 class="account-heading">{{ user.username }}</h2>-->
+<!--          <p class="text-secondary">{{ user.email }}</p>-->
+<!--          <p class="text-secondary">{{ user.first_name }}</p>-->
+<!--          <p class="text-secondary">{{ user.last_name }}</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <form method="POST" enctype="multipart/form-data">-->
+<!--          {% csrf_token %}-->
+<!--          <fieldset class="form-group">-->
+<!--              <legend class="border-bottom mb-4">Profile Info</legend>-->
+<!--              {{ u_form|crispy }}-->
+<!--              {{ p_form|crispy }}-->
+<!--          </fieldset>-->
+<!--          <div class="form-group">-->
+<!--              <button class="btn btn-outline-primary" type="submit">Update</button>-->
+<!--              <a class="btn btn-outline-primary" href="{% url 'password_change' %}" type="submit">Change Password</a>-->
+<!--              <a class="btn btn-outline-primary" href="{% url 'password_reset' %}" type="submit">Reset Password</a>-->
+<!--          </div>-->
+<!--      </form>-->
+<!--    </div>-->
+<!--     </div>-->
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" style="object-fit:cover" width="150px" src="{{ user.profile.image.url }}">
+                <span class="font-weight-bold">{{ user.first_name }}</span><span class="text-black-50">{{ user.email }}</span><span> </span></div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Name</label><p class="text-secondary">{{ user.first_name }}</p></div>
+                    <div class="col-md-6"><label class="labels">Surname</label><p class="text-secondary">{{ user.last_name }}</p></div>
+                </div>
+                <div class="row mt-2">
+                    {{ u_form|crispy }}
+                    {{ p_form|crispy }}
+                </div>
+               <button class="btn btn-outline-primary" type="submit">Update</button>
+              <a class="btn btn-outline-primary" href="{% url 'password_change' %}" type="submit">Change Password</a>
+              <a class="btn btn-outline-primary" href="{% url 'password_reset' %}" type="submit">Reset Password</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+<!--<div class="container rounded bg-white mt-5 mb-5">-->
+<!--    <div class="row">-->
+<!--        <div class="col-md-3 border-right">-->
+<!--            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>-->
+<!--        </div>-->
+<!--        <div class="col-md-5 border-right">-->
+<!--            <div class="p-3 py-5">-->
+<!--                <div class="d-flex justify-content-between align-items-center mb-3">-->
+<!--                    <h4 class="text-right">Profile Settings</h4>-->
+<!--                </div>-->
+<!--                <div class="row mt-2">-->
+<!--                    <div class="col-md-6"><label class="labels">Name</label><p class="text-secondary">{{ user.first_name }}</p></div>-->
+<!--                    <div class="col-md-6"><label class="labels">Surname</label><p class="text-secondary">{{ user.last_name }}</p></div>-->
+<!--                </div>-->
+<!--                <div class="row mt-3">-->
+<!--                    {{ u_form|crispy }}-->
+<!--                    {{ p_form|crispy }}-->
+<!--                </div>-->
+<!--               <button class="btn btn-outline-primary" type="submit">Update</button>-->
+<!--              <a class="btn btn-outline-primary" href="{% url 'password_change' %}" type="submit">Change Password</a>-->
+<!--              <a class="btn btn-outline-primary" href="{% url 'password_reset' %}" type="submit">Reset Password</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+</div>
+</div>
