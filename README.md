@@ -17,8 +17,7 @@ Bu Django asosida ishlab chiqilgan online do'kon loyihasi bo'lib, foydalanuvchil
 ## O'rnatish bo'yicha yo'riqnoma
 1. Repository’ni klonlash:
    ```bash
-   git clone https://github.com/AbdusattarovOtabek/Django-App.git
-   cd Django-App
+   git clone https://github.com/AbdusattarovOtabek/Django-App.git](https://github.com/AbdusattarovOtabek/Online-shopping.git
    ```
 2. Virtual muhitni yaratish va faollashtirish:
    ```bash
